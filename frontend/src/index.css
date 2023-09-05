@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 * {
-  font-family: "Open Sans";
+  font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@
 
 body,
 html {
-  background-color: gray;
+  background-color: #424242;
   color: white;
 }
 
@@ -18,4 +18,20 @@ a:hover,
 a:visited {
   color: unset;
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

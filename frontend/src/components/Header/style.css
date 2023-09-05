@@ -1,0 +1,171 @@
+.main-menu {
+  padding: 0 !important;
+}
+
+.container-fluid {
+  background-color: black;
+  display: flex;
+  flex-wrap: unset !important;
+  justify-content: space-between;
+  padding: 0 0 0 10px !important;
+}
+
+.dm-guide-logo {
+  width: 100px;
+  margin: 10px 20px 10px 0;
+}
+
+.dm-guide-header-content {
+  display: flex;
+  margin-right: 10px;
+}
+
+#icon-login, #icon-search {
+  width: 100%;
+  height: 65px;
+  padding: 18px 10px;
+}
+
+#icon-login:hover, #icon-search:hover, .container-fluid button:hover {
+  background-color: rgb(66, 66, 66);
+  border: 1px solid rgb(66, 66, 66);
+}
+
+.dm-guide-navbar {
+  display: flex;
+  animation: slide 4s normal;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.dm-guide-navbar a {
+  width: 100%;
+}
+
+.dm-guide-navbar button {
+  border: 3px solid rgb(66, 66, 66);
+  display: flex;
+  align-items: center;
+}
+
+.dm-guide-login-button img {
+  width: 50px;
+  height: 100%;
+  padding: 8px 0;
+  margin-right: 10px;
+}
+
+.dm-guide-register-button img {
+width: 50px;
+height: 100%;
+padding: 10px 0;
+margin-right: 10px;
+}
+
+.dm-guide-navbar button:hover, .dm-guide-login-button:hover, .dm-guide-close-search button:hover, .dm-guide-register-button:hover  {
+  background-color: rgb(43, 43, 43);
+  border: 3px solid rgb(43, 43, 43);
+}
+
+.dm-guide-navbar a button, .dm-guide-return button {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.dm-guide-return {
+  width: 100px;
+  margin: 0;
+}
+
+.dm-guide-search-container {
+  display: flex;
+  animation: slide 4s normal;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  padding: 15px 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.dm-guide-input-search {
+  width: 60%;
+  background-color: rgb(184, 184, 184);
+  color: white;
+  border: none;
+}
+
+.dm-guide-input-search:hover {
+  border: none;
+}
+
+.dm-guide-search-icon {
+  background-color: rgb(66, 66, 66);
+  width: 30px;
+  border-radius:0 5px 5px 0;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.dm-guide-search-icon img {
+  width: 100%;
+}
+
+.dm-guide-close-search {
+  margin-left: 15px;
+}
+
+.dm-guide-close-search button {
+  padding: 0 10px;
+  border: 3px solid rgb(66, 66, 66);
+}
+
+.click-search, .click-login-register {
+  width: 0%;
+  left: 100%;
+  overflow: hidden;
+  animation: slide 4s normal;
+  background-color: black;
+  height: 60px;
+  padding: 15px 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+}
+
+.dm-guide-header-content button {
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgb(66, 66, 66);
+}
+
+.dm-guide-header-search {
+  height: 30px;
+  display: flex;
+}
+
+.dm-guide-header-search img {
+  height: auto;
+  margin: 3px;
+}

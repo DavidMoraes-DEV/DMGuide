@@ -1,12 +1,11 @@
-import './App.css'
+import Routes from './Routes';
+import './assets/styles/custom.scss';
 
 function App() {
 
   return (
-    <>
-      <h1>DM Guide Casino</h1>
-    </>
+    <Routes />
   )
 }
 
-export default App
+export default App;
