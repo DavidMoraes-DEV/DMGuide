@@ -1,18 +1,49 @@
 .main-menu {
   padding: 0 !important;
+  height: 65px;
 }
 
 .container-fluid {
   background-color: black;
   display: flex;
-  flex-wrap: unset !important;
-  justify-content: space-between;
-  padding: 0 0 0 10px !important;
+  padding: 0 !important;
+}
+
+.dm-guide-toggler-logo {
+  display: flex;
+  padding: 5px 0 5px 10px;
+}
+
+.dm-guide-toggler-logo button {
+  margin: 7px 0;
 }
 
 .dm-guide-logo {
   width: 100px;
-  margin: 10px 20px 10px 0;
+  margin: 10px 15px;
+}
+
+.dm-guide-menu-container {
+  width: 100%;
+}
+
+.dm-guide-menu li {
+  padding: 10px 10px;
+  background-color: black;
+}
+
+.dm-guide-menu li:hover {
+  background-color: rgb(66, 66, 66);
+}
+
+#casino-icon, #feedback-icon {
+  width: 25px;
+}
+
+.icon-white {
+  filter: contrast(0%);
+  filter: invert(100%);
+  margin: 0 20px 0 15px;
 }
 
 .dm-guide-header-content {
@@ -23,7 +54,7 @@
 #icon-login, #icon-search {
   width: 100%;
   height: 65px;
-  padding: 18px 10px;
+  padding: 20px;
 }
 
 #icon-login:hover, #icon-search:hover, .container-fluid button:hover {
@@ -35,6 +66,7 @@
   display: flex;
   animation: slide 4s normal;
   width: 100%;
+  height: 65px;
   justify-content: center;
   position: absolute;
   z-index: 100;
@@ -66,7 +98,7 @@ padding: 10px 0;
 margin-right: 10px;
 }
 
-.dm-guide-navbar button:hover, .dm-guide-login-button:hover, .dm-guide-close-search button:hover, .dm-guide-register-button:hover  {
+.dm-guide-navbar button:hover, .dm-guide-login-button:hover, .dm-guide-close-search button:hover, .dm-guide-register-button:hover, .dm-guide-search-icon:hover  {
   background-color: rgb(43, 43, 43);
   border: 3px solid rgb(43, 43, 43);
 }
@@ -88,7 +120,7 @@ margin-right: 10px;
   animation: slide 4s normal;
   background-color: black;
   width: 100%;
-  height: 60px;
+  height: 65px;
   padding: 15px 0;
   justify-content: center;
   position: absolute;
@@ -119,14 +151,15 @@ margin-right: 10px;
 
 .dm-guide-search-icon {
   background-color: rgb(66, 66, 66);
-  width: 30px;
+  width: 40px;
   border-radius:0 5px 5px 0;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  border: none;
 }
 
 .dm-guide-search-icon img {
+  padding: 5px 8px 8px;
   width: 100%;
 }
 

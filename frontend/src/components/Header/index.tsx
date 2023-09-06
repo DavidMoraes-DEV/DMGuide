@@ -1,28 +1,28 @@
-import { NavLink } from "react-router-dom";
-import "@popperjs/core";
-import "bootstrap/js/src/collapse.js";
-import "./style.css";
+import { NavLink } from 'react-router-dom';
+import '@popperjs/core';
+import 'bootstrap/js/src/collapse.js';
+import './style.css';
 
 const Header = () => {
   let statusSearch = false;
   let statusLogin = false;
 
   function searchBar() {
-    const search = document.querySelector("#search-id");
+    const search = document.querySelector('#search-id');
 
     statusSearch == false
-      ? search?.classList.add("click-search")
-      : search?.classList.remove("click-search");
+      ? search?.classList.add('click-search')
+      : search?.classList.remove('click-search');
 
     statusSearch == false ? (statusSearch = true) : (statusSearch = false);
   }
 
   function LoginBar() {
-    const login = document.querySelector("#login-register-id");
+    const login = document.querySelector('#login-register-id');
 
     statusLogin == false
-      ? login?.classList.add("click-login-register")
-      : login?.classList.remove("click-login-register");
+      ? login?.classList.add('click-login-register')
+      : login?.classList.remove('click-login-register');
 
     statusLogin == false ? (statusLogin = true) : (statusLogin = false);
   }
@@ -30,45 +30,26 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-dark bg-primary main-menu">
       <div className="container-fluid">
-      <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#dm-guide-toggler"
-          aria-controls="dm-guide-toggler"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        <div className="dm-guide-toggler-logo">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#dm-guide-toggler"
+            aria-controls="dm-guide-toggler"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-        <NavLink to="/" exact>
-          <img
-            src="https://raw.githubusercontent.com/DavidMoraes-DEV/ProjectsAssets/main/winfree/logo-win.png"
-            alt="Logo"
-            className="dm-guide-logo"
-          />
-        </NavLink>
-
-        
-        <div className="collapse navbar-collapse" id="dm-guide-toggler">
-          <ul className="navbar-nav offset-md-2 main-menu">
-            <li>
-              <NavLink to="/" activeClassName="active" exact>
-                HOME
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/products" activeClassName="active">
-                CATÁLOGO
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/admin" activeClassName="active">
-                ADMIN
-              </NavLink>
-            </li>
-          </ul>
+          <NavLink to="/" exact>
+            <img
+              src="https://raw.githubusercontent.com/DavidMoraes-DEV/ProjectsAssets/main/winfree/logo-win.png"
+              alt="Logo"
+              className="dm-guide-logo"
+            />
+          </NavLink>
         </div>
 
         <div className="dm-guide-header-content">
@@ -117,7 +98,7 @@ const Header = () => {
                   src="https://img.icons8.com/clouds/100/enter-2.png"
                   alt="login-icon"
                 />
-                <h5>Entrar</h5>
+                <h6>Entrar</h6>
               </button>
             </NavLink>
             <NavLink to="/register" activeClassName="active">
@@ -126,13 +107,51 @@ const Header = () => {
                   src="https://img.icons8.com/clouds/100/add-bookmark.png"
                   alt="register-icon"
                 />
-                <h5>Cadastrar</h5>
+                <h6>Cadastrar</h6>
               </button>
             </NavLink>
             <div className="dm-guide-return">
               <button onClick={LoginBar}>X</button>
             </div>
           </div>
+        </div>
+
+        <div
+          className="collapse navbar-collapse dm-guide-menu-container"
+          id="dm-guide-toggler"
+        >
+          <ul className="navbar-nav offset-md- dm-guide-menu">
+            <li>
+              <img
+                src="https://img.icons8.com/material-rounded/24/us-dollar.png"
+                id="cifrao-icon"
+                className="icon-white"
+              />
+              <NavLink to="/promotions" activeClassName="active" exact>
+                Promoções
+              </NavLink>
+            </li>
+            <li>
+              <img
+                src="https://img.icons8.com/external-others-maxicons/62/external-casino-gambling-others-maxicons.png"
+                id="casino-icon"
+                className="icon-white"
+              />
+              <NavLink to="/cassinos" activeClassName="active">
+                Cassinos
+              </NavLink>
+            </li>
+            <li>
+              <img
+                src="https://img.icons8.com/ios-filled/50/popular-topic.png"
+                id="feedback-icon"
+                className="icon-white"
+              />
+              <NavLink to="/feedback" activeClassName="active">
+                Feedback
+              </NavLink>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
