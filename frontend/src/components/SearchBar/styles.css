@@ -1,0 +1,24 @@
+.dm-guide-input-search {
+  width: 60%;
+  background-color: rgb(184, 184, 184);
+  color: white;
+  border: none;
+}
+
+.dm-guide-input-search:hover {
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .dm-guide-input-search {
+    width: 100%;
+  }
+
+  .dm-guide-search-icon {
+    padding: 0;
+  }
+
+  .dm-guide-search-icon img {
+    padding: 3px 8px 2px;
+  }
+}

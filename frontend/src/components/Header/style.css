@@ -1,10 +1,10 @@
 .main-menu {
   padding: 0 !important;
+  min-width: 320px;
   height: 65px;
 }
 
 .container-fluid {
-  background-color: black;
   display: flex;
   padding: 0 !important;
 }
@@ -18,25 +18,60 @@
   margin: 7px 0;
 }
 
+.dm-guide-header-menu-itens {
+  display: none;
+}
+
 .dm-guide-logo {
   width: 100px;
-  margin: 10px 15px;
+  margin: 10px 0 10px 12px;
 }
 
 .dm-guide-menu-container {
   width: 100%;
+  margin-left: 10px;
+}
+
+.ballon-icon {
+  background: #000;
+  border-radius: 10px;
+  width: 200px;
+  height: 100%;
+  position: relative;
+  margin: 10px 0 0;
+}
+
+.ballon-icon:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid #000;
+  top: -10px;
+  left: 9%;
 }
 
 .dm-guide-menu li {
   padding: 10px 10px;
-  background-color: black;
+}
+
+.dm-guide-menu li:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.dm-guide-menu li:last-child {
+  border-radius: 0 0 10px 10px;
 }
 
 .dm-guide-menu li:hover {
   background-color: rgb(66, 66, 66);
+  border: 2px solid rgb(66, 66, 66);
 }
 
-#casino-icon, #feedback-icon {
+#casino-icon,
+#feedback-icon {
   width: 25px;
 }
 
@@ -48,16 +83,23 @@
 
 .dm-guide-header-content {
   display: flex;
-  margin-right: 10px;
 }
 
-#icon-login, #icon-search {
+.dm-guide-header-search-bar {
+  display: none;
+}
+
+#icon-login,
+#icon-search {
   width: 100%;
   height: 65px;
   padding: 20px;
 }
 
-#icon-login:hover, #icon-search:hover, .container-fluid button:hover {
+#icon-login:hover,
+#icon-search:hover,
+.container-fluid button:hover,
+.dm-guide-menu li:hover {
   background-color: rgb(66, 66, 66);
   border: 1px solid rgb(66, 66, 66);
 }
@@ -92,23 +134,27 @@
 }
 
 .dm-guide-register-button img {
-width: 50px;
-height: 100%;
-padding: 10px 0;
-margin-right: 10px;
+  width: 50px;
+  height: 100%;
+  padding: 10px 0;
+  margin-right: 10px;
 }
 
-.dm-guide-navbar button:hover, .dm-guide-login-button:hover, .dm-guide-close-search button:hover, .dm-guide-register-button:hover, .dm-guide-search-icon:hover  {
+.dm-guide-navbar button:hover,
+.dm-guide-login-button:hover,
+.dm-guide-close-search button:hover,
+.dm-guide-register-button:hover,
+.dm-guide-search-icon:hover {
   background-color: rgb(43, 43, 43);
   border: 3px solid rgb(43, 43, 43);
 }
 
-.dm-guide-navbar a button, .dm-guide-return button {
+.dm-guide-navbar a button,
+.dm-guide-return button {
   align-items: center;
   justify-content: center;
   align-content: center;
 }
-
 
 .dm-guide-return {
   width: 100px;
@@ -138,21 +184,14 @@ margin-right: 10px;
   }
 }
 
-.dm-guide-input-search {
-  width: 60%;
-  background-color: rgb(184, 184, 184);
-  color: white;
-  border: none;
-}
-
-.dm-guide-input-search:hover {
-  border: none;
+.dm-guide-header-login-register {
+  display: none;
 }
 
 .dm-guide-search-icon {
   background-color: rgb(66, 66, 66);
   width: 40px;
-  border-radius:0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
   align-items: center;
   justify-content: center;
   border: none;
@@ -172,7 +211,8 @@ margin-right: 10px;
   border: 3px solid rgb(66, 66, 66);
 }
 
-.click-search, .click-login-register {
+.click-search,
+.click-login-register {
   width: 0%;
   left: 100%;
   overflow: hidden;
@@ -201,4 +241,134 @@ margin-right: 10px;
 .dm-guide-header-search img {
   height: auto;
   margin: 3px;
+}
+
+@media (min-width: 576px) {
+  .dm-guide-logo {
+    margin: 10px 20px;
+  }
+
+  .dm-guide-toggler-logo {
+    padding: 5px 0 5px 20px;
+  }
+
+  .dm-guide-menu-container {
+    margin-left: 10px;
+  }
+
+  .ballon-icon:after {
+    left: 13%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-fluid {
+    padding: 0 30px 0 0 !important;
+  }
+
+  .dm-guide-header-content {
+    width: 70%;
+  }
+
+  .dm-guide-header-login-register,
+  .dm-guide-header-login-register button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+
+  .dm-guide-header-login-register button {
+    width: 100%;
+    padding: 5px;
+    justify-content: center;
+    margin: 0 10px;
+  }
+
+  .dm-guide-header-login-register button img {
+    display: none;
+  }
+
+  .dm-guide-header-login-register button h6 {
+    font-size: 14px;
+  }
+
+  .dm-guide-header-search-bar {
+    display: flex;
+    width: 100%;
+    margin: 0 2%;
+  }
+
+  #icon-search,
+  #icon-login {
+    display: none;
+  }
+
+  .dm-guide-header-search-bar {
+    height: 65px;
+    padding: 18px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .dm-guide-header-menu-itens {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    margin-right: 20px;
+  }
+
+  .dm-guide-header-menu-itens ul {
+    margin: 0;
+  }
+
+  .ballon-icon,
+  .ballon-icon:after {
+    display: none;
+  }
+  .dm-guide-header-content {
+    width: auto;
+  }
+
+  .dm-guide-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .dm-guide-menu li {
+    display: flex;
+    padding: 0 10px;
+    border: 1px solid red;
+    height: 65px;
+    align-items: center;
+  }
+
+  .dm-guide-menu li:first-child {
+    border-radius: 0;
+  }
+  
+  .dm-guide-menu li:last-child {
+    border-radius: 0;
+  }
+  
+
+  .icon-white {
+    width: auto !important;
+    height: 20px;
+    margin: 0 10px 0 0;
+  }
+
+  .dm-guide-header-menu-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .dm-guide-header-content {
+    width: 100%;
+  }
+
+  #dm-guide-toggler {
+    display: none !important;
+  }
 }

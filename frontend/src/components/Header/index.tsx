@@ -2,6 +2,9 @@ import { NavLink } from 'react-router-dom';
 import '@popperjs/core';
 import 'bootstrap/js/src/collapse.js';
 import './style.css';
+import SearchBar from '../SearchBar';
+import LoginRegister from './LoginRegister';
+import MenuItens from '../MenuItens';
 
 const Header = () => {
   let statusSearch = false;
@@ -28,7 +31,7 @@ const Header = () => {
   }
 
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-primary main-menu">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary main-menu">
       <div className="container-fluid">
         <div className="dm-guide-toggler-logo">
           <button
@@ -51,8 +54,13 @@ const Header = () => {
             />
           </NavLink>
         </div>
-
+        <div className='dm-guide-header-menu-itens'>
+          <MenuItens />
+        </div>
         <div className="dm-guide-header-content">
+          <div className="dm-guide-header-search-bar">
+            <SearchBar />
+          </div>
           <img
             src="https://raw.githubusercontent.com/DavidMoraes-DEV/ProjectsAssets/main/winfree/lupa.png"
             alt="Pesquisar Cassinos"
@@ -71,45 +79,21 @@ const Header = () => {
             className="dm-guide-search-container click-search"
             id="search-id"
           >
-            <input
-              type="text"
-              id="input-search"
-              className="dm-guide-input-search"
-            />
-
-            <div className="dm-guide-search-icon">
-              <img
-                src="https://raw.githubusercontent.com/DavidMoraes-DEV/ProjectsAssets/main/winfree/lupa.png"
-                alt="Pesquisar Cassinos"
-              />
-            </div>
+            <SearchBar />
             <div className="dm-guide-close-search">
               <button onClick={searchBar}>X</button>
             </div>
+          </div>
+
+          <div className="dm-guide-header-login-register">
+            <LoginRegister />
           </div>
 
           <div
             className="dm-guide-navbar click-login-register"
             id="login-register-id"
           >
-            <NavLink to="/login" activeClassName="active" exact>
-              <button className="dm-guide-login-button">
-                <img
-                  src="https://img.icons8.com/clouds/100/enter-2.png"
-                  alt="login-icon"
-                />
-                <h6>Entrar</h6>
-              </button>
-            </NavLink>
-            <NavLink to="/register" activeClassName="active">
-              <button className="dm-guide-register-button">
-                <img
-                  src="https://img.icons8.com/clouds/100/add-bookmark.png"
-                  alt="register-icon"
-                />
-                <h6>Cadastrar</h6>
-              </button>
-            </NavLink>
+            <LoginRegister />
             <div className="dm-guide-return">
               <button onClick={LoginBar}>X</button>
             </div>
@@ -120,38 +104,7 @@ const Header = () => {
           className="collapse navbar-collapse dm-guide-menu-container"
           id="dm-guide-toggler"
         >
-          <ul className="navbar-nav offset-md- dm-guide-menu">
-            <li>
-              <img
-                src="https://img.icons8.com/material-rounded/24/us-dollar.png"
-                id="cifrao-icon"
-                className="icon-white"
-              />
-              <NavLink to="/promotions" activeClassName="active" exact>
-                Promoções
-              </NavLink>
-            </li>
-            <li>
-              <img
-                src="https://img.icons8.com/external-others-maxicons/62/external-casino-gambling-others-maxicons.png"
-                id="casino-icon"
-                className="icon-white"
-              />
-              <NavLink to="/cassinos" activeClassName="active">
-                Cassinos
-              </NavLink>
-            </li>
-            <li>
-              <img
-                src="https://img.icons8.com/ios-filled/50/popular-topic.png"
-                id="feedback-icon"
-                className="icon-white"
-              />
-              <NavLink to="/feedback" activeClassName="active">
-                Feedback
-              </NavLink>
-            </li>
-          </ul>
+          <MenuItens />
         </div>
       </div>
     </nav>
