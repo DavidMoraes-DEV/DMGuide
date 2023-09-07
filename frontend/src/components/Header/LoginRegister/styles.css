@@ -1,11 +1,54 @@
-#button-login:hover {
-  background-color: rgb(0, 67, 0);
-  border: none;
-  border-radius: 5px;
+.dm-guide-login-button:hover,
+.dm-guide-register-button {
+  background-color: green;
 }
 
-#button-register:hover {
-  background-color: rgb(67, 0, 0);
-  border: none;
-  border-radius: 5px;
+.dm-guide-login-button img {
+  width: 50px;
+  height: 100%;
+  padding: 8px 0;
+  margin-right: 10px;
+}
+
+.dm-guide-register-button img {
+  width: 30px;
+  height: 100%;
+  padding: 10px 0;
+  margin-right: 10px;
+}
+
+.dm-guide-register-button h6,
+.dm-guide-login-button h6 {
+  font-size: 12px;
+}
+
+.dm-guide-login-button:hover,
+.dm-guide-register-button:hover {
+  background-color: rgb(43, 43, 43);
+  border: 3px solid rgb(43, 43, 43);
+}
+
+#button-login img, #button-register img {
+  padding: 0;
+  width: 20px;
+  height: auto;
+  filter: invert(100%);
+}
+
+#button-login h6, #button-register h6 {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  #button-login:hover {
+    background-color: rgb(0, 67, 0);
+    border: none;
+    border-radius: 5px;
+  }
+
+  #button-register:hover {
+    background-color: rgb(66, 66, 66);
+    border: none;
+    border-radius: 5px;
+  }
 }
