@@ -1,0 +1,123 @@
+.dm-guide-login-card-content {
+  margin: 0;
+  height: 100%;
+  padding: 30px 20px;
+  border: 1px solid purple;
+}
+
+.dm-guide-login-card-icon {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
+
+.dm-guide-login-card-icon img {
+  width: 90px;
+}
+
+.dm-guide-login-card-icon h1 {
+  font-size: 16px;
+}
+
+.dm-guide-login-card-inputs-container {
+  padding: 10px;
+  border: 1px solid yellow;
+}
+
+.dm-guide-login-card-input-email-container {
+  margin-bottom: 20px;
+  border: 1px solid green;
+}
+
+.dm-guide-login-card-input-email-container p,
+.dm-guide-login-card-input-password-container p {
+  margin: 0 5px 5px 0;
+  font-size: 12px;
+}
+
+.dm-guide-login-card-input-password-container {
+  border: 1px solid fuchsia;
+}
+
+.dm-guide-login-card-input-email-container input,
+.dm-guide-login-card-input-password-container input {
+  width: 100%;
+}
+
+.dm-guide-login-card-links {
+    display: flex;
+    border: 1px solid orange;
+    border-bottom: 2px solid rgb(66, 66, 66);
+    padding-top: 15px;
+    justify-content: space-between;
+}
+
+.dm-guide-login-card-links a {
+    width: auto;
+}
+
+.dm-guide-login-card-links a:hover {
+    color: rgb(218, 218, 218);
+}
+
+.dm-guide-login-card-links a p {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.dm-guide-login-card-buttons-container {
+  display: flex;
+  padding: 20px 0 0;
+  border: 1px solid cadetblue;
+}
+
+.dm-guide-login-card-buttons-container button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid rgb(66, 66, 66);
+  justify-content: center;
+  background-color: rgb(66, 66, 66);
+}
+
+.dm-guide-login-card-buttons-container button:first-child {
+  margin-right: 20px;
+}
+
+.dm-guide-login-card-buttons-container button:first-child:hover {
+  background-color: rgb(0, 67, 0);
+  border: 3px solid rgb(0, 67, 0);
+}
+
+.dm-guide-login-card-buttons-container button:last-child:hover {
+    background-color: rgb(67, 0, 0);
+    border: 3px solid rgb(67, 0, 0);
+}
+
+.dm-guide-login-card-buttons-container button h6 {
+    font-size: 12px;
+}
+
+.dm-guide-login-card-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid white;
+}
+
+.click-login-card-hidden {
+  width: 0%;
+  left: 100%;
+  overflow: hidden;
+  animation: slide 4s normal;
+  background-color: black;
+  height: 60px;
+  padding: 15px 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+}

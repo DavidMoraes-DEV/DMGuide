@@ -3,8 +3,8 @@ import Header from "./components/Header";
 import Home from "./pages/Home";
 import Cassinos from "./pages/Cassinos";
 import history from "./util/history";
-import Login from "./components/Login";
-import Register from "./components/Register";
+import Login from "./components/LoginCard";
+import Register from "./components/RegisterCard";
 import Promotions from "./pages/Promotions";
 import Feedback from "./pages/Feedback";
 

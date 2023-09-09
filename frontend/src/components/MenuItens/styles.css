@@ -1,3 +1,7 @@
+.dm-guide-menu {
+  width: 200px;
+}
+
 .dm-guide-menu li {
   padding: 10px 10px;
 }
@@ -23,7 +27,6 @@
 .ballon-icon {
   background: #000;
   border-radius: 10px;
-  width: 200px;
   height: 100%;
   position: relative;
   margin: 10px 0 0;

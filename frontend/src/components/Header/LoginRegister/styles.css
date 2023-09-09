@@ -1,5 +1,4 @@
-.dm-guide-login-button:hover,
-.dm-guide-register-button {
+.dm-guide-login-button:hover {
   background-color: green;
 }
 
@@ -28,6 +27,10 @@
   border: 3px solid rgb(43, 43, 43);
 }
 
+#button-login, #button-register {
+  justify-content: center;
+}
+
 #button-login img, #button-register img {
   padding: 0;
   width: 20px;
@@ -38,6 +41,31 @@
 #button-login h6, #button-register h6 {
   font-size: 12px;
 }
+
+.dm-guide-login-card-container {
+  position: absolute;
+  left: 0;
+  top: 65px;
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid blue;
+}
+
+.click-card-loader {
+  width: 100%;
+  left: 100%;
+  overflow: hidden;
+  animation: slide 4s normal;
+  background-color: black;
+  height: 60px;
+  padding: 15px 0;
+  justify-content: center;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  border: 1px solid salmon;
+}
+
 
 @media (min-width: 768px) {
   #button-login:hover {

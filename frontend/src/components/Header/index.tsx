@@ -13,6 +13,8 @@ const Header = () => {
   function searchBar() {
     const search = document.querySelector('#search-id');
 
+    console.log("search: ")
+    console.log(search);
     statusSearch == false
       ? search?.classList.add('click-search')
       : search?.classList.remove('click-search');
@@ -20,9 +22,14 @@ const Header = () => {
     statusSearch == false ? (statusSearch = true) : (statusSearch = false);
   }
 
-  function LoginBar() {
+  function loginBar() {
     const login = document.querySelector('#login-register-id');
 
+    console.log("login Id: ")
+    console.log(login?.id);
+    console.log("Elemento: ")
+    console.log(login);
+    
     statusLogin == false
       ? login?.classList.add('click-login-register')
       : login?.classList.remove('click-login-register');
@@ -72,7 +79,7 @@ const Header = () => {
             src="https://raw.githubusercontent.com/DavidMoraes-DEV/ProjectsAssets/main/winfree/login.png"
             alt="Entrar Cadastrar"
             id="icon-login"
-            onClick={LoginBar}
+            onClick={loginBar}
           />
 
           <div
@@ -95,7 +102,7 @@ const Header = () => {
           >
             <LoginRegister />
             <div className="dm-guide-return">
-              <button onClick={LoginBar}>X</button>
+              <button onClick={loginBar}>X</button>
             </div>
           </div>
         </div>
